@@ -108,6 +108,22 @@
       renderTasks();
     }
 
+    function deleteTask(index) {
+      tasks.splice(index, 1);
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+      renderTasks();
+    }
+
+    function setPriority(priority, button) {
+      selectedPriority = priority;
+      if (selectedButton) selectedButton.classList.remove("selected");
+      button.classList.add("selected");
+      selectedButton = button;
+    }
+
+    
+    
+
     
     
   </script>
