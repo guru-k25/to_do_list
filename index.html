@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To do list (GDG) </title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced To-Do List</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="to-do-container">
-        <div id="datetime"></div>
-        <h2> To-Do list</h2>
-        <div class="input-section">
-            <div class="task-row">
-                <input id="inputTask" placeholder="Add a task...">
-                <div class="priority-box">
-                    <div class="priority-buttons">
-                        <button class="priority-btn red" onclick="setPriority('red', this)"></button>
-                        <button class="priority-btn yellow" onclick="setPriority('yellow', this)"></button>
-                        <button class="priority-btn green" onclick="setPriority('green', this)"></button>
-                    </div>
-                    <div class="labels">
-                        <span>High</span>
-                        <span>Medium</span>
-                        <span>Low</span>
-                    </div>
-                </div>
-                <button class="add" onclick="addTask()">Add</button>
-            </div>
-            <ul id="task-list"></ul>
+  <div class="todo-container">
+    <div id="dateTime"></div>
+    <h2>To-Do List</h2>
+    <div class="input-section">
+      <div class="task-row">
+        <input type="text" id="taskInput" placeholder="Add a task...">
+        <div class="priority-box">
+          <div class="priority-buttons">
+            <button class="priority-btn red" onclick="setPriority('red', this)"></button>
+            <button class="priority-btn yellow" onclick="setPriority('yellow', this)"></button>
+            <button class="priority-btn green" onclick="setPriority('green', this)"></button>
+          </div>
+          <div class="labels">
+            <span>High</span>
+            <span>Medium</span>
+            <span>Low</span>
+          </div>
         </div>
-    </div>    
+        <button class="add" onclick="addTask()">Add</button>
+      </div>
+      <div class="deadline">
+        <label for="deadlineInput">Deadline: </label>
+        <input type="datetime-local" id="deadlineInput" step="60">
+      </div>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script>
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    let selectedPriority = "green"; 
+    let selectedButton = null;
+
+    
+  </script>
 </body>
 </html>

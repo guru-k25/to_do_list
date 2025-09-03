@@ -10,7 +10,7 @@ body {
       margin: 0;
     }
 
-    .to-do-container {
+    .todo-container {
       background: rgba(255, 255, 255, 0.95);
       padding: 30px;
       border-radius: 15px;
@@ -41,7 +41,7 @@ body {
     .task-row {
       display: flex;
       align-items: center;
-      gap: 20px; 
+      gap: 40px; /* further increased spacing */
     }
 
     input[type="text"] {
@@ -104,6 +104,12 @@ body {
       flex: 1;
     }
 
+    .deadline {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     ul {
       list-style: none;
       padding: 0;
@@ -141,3 +147,16 @@ body {
       border-radius: 6px;
       cursor: pointer;
     }
+
+    .countdown {
+      margin-right: 10px;
+      font-size: 0.8rem;
+      color: darkslategray;
+      min-width: 80px;
+      text-align: right;
+    }
+
+    /* Priority colors for tasks */
+    .priority-red { border-left: 8px solid red; }
+    .priority-yellow { border-left: 8px solid goldenrod; }
+    .priority-green { border-left: 8px solid green; }
