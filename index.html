@@ -6,6 +6,29 @@
     <title>To do list (GDG) </title>
 </head>
 <body>
+    <div class="to-do-container">
+        <div id="datetime"></div>
+        <h2> To-Do list</h2>
+        <div class="input-section">
+            <div class="task-row">
+                <input id="inputTask" placeholder="Add a task...">
+                <div class="priority-box">
+                    <div class="priority-buttons">
+                        <button class="priority-btn red" onclick="setPriority('red', this)"></button>
+                        <button class="priority-btn yellow" onclick="setPriority('yellow', this)"></button>
+                        <button class="priority-btn green" onclick="setPriority('green', this)"></button>
+                    </div>
+                    <div class="labels">
+                        <span>High</span>
+                        <span>Medium</span>
+                        <span>Low</span>
+                    </div>
+                </div>
+                <div class="add" onclick="addTask()">Add</div>
+            </div>
+        </div>
+
+    </div>
     
 </body>
 </html>
