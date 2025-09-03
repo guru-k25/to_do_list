@@ -4,6 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list (GDG) </title>
+    <style>
+      body {
+      font-family: Arial, sans-serif;
+      background: url("https://i.pinimg.com/originals/89/be/2a/89be2a4c6ea6a565b23c3e1fab33d195.jpg") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 40px;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .todo-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+      width: 600px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    #dateTime {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .input-section {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      gap: 15px;
+    }
+
+    .task-row {
+      display: flex;
+      align-items: center;
+      gap: 20px; /* Increased spacing */
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 15px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    button.add {
+      padding: 15px 20px;
+      font-size: 1rem;
+      border: none;
+      background: slateblue;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    priority-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .priority-buttons {
+      display: flex;
+      gap: 40px;
+    }
+
+    .priority-btn {
+      width: 40px;
+      height: 40px;
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .priority-btn.selected {
+      box-shadow: 0 0 0 4px rgba(0,0,0,0.2), 0 0 0 8px rgba(0,0,0,0.1);
+    }
+    </style>
 </head>
 <body>
     <div class="to-do-container">
@@ -24,7 +114,7 @@
                         <span>Low</span>
                     </div>
                 </div>
-                <button class="add"  onclick="addTask()">Add</button>
+                <button class="add" onclick="addTask()">Add</button>
             </div>
             <ul id="task-list"></ul>
         </div>
